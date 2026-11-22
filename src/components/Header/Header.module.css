@@ -4,8 +4,12 @@
 
 /* the <header> wrapper */
 .header {
+  padding: 24px 16px;
+  text-align: center;
 }
 
-/* the <h1> - big, centered, bold */
 .title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
 }

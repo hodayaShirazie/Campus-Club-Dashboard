@@ -1,5 +1,6 @@
 // MembersList - wraps all the MemberCards and switches between list and grid.
 import styles from './MembersList.module.css'
+import MemberCard from '../MemberCard/MemberCard.jsx'
 
 /**
  * @param {object} props
@@ -8,13 +9,27 @@ import styles from './MembersList.module.css'
  * @param {number | null} props.selectedMemberId
  * @param {(memberId: number) => void} props.onSelect - pass it to every MemberCard
  */
+
 export default function MembersList({
   members,
   layout,
   selectedMemberId,
   onSelect,
 }) {
-  // TODO: a loop over members -> <MemberCard ... />
-  // TODO: if there are no members -> the message "No members to show"
-  return null
+  if (members.length === 0) {
+    return <p className={styles.empty}>No members to show</p>
+  }
+
+  return (
+    <div className={`${styles.membersList} ${styles[layout]}`}>
+      {members.map((member) => (
+        <MemberCard
+          key={member.id}
+          member={member}
+          isSelected={member.id === selectedMemberId}
+          onSelect={onSelect}
+        />
+      ))}
+    </div>
+  )
 }

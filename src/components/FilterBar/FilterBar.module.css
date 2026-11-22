@@ -2,22 +2,64 @@
    Use them in FilterBar.jsx: className={styles.filterBar}
    Don't delete the classes marked "REQUIRED BY THE TESTS". */
 
-/* the whole bar */
 .filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
 }
 
-/* the <label> with the checkbox */
 .toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 
-/* the wrapper of the List / Grid buttons */
-.layoutSwitch {
-}
+/* .layoutSwitch {
+  display: flex;
+  gap: 6px;
+} */
 
-/* REQUIRED BY THE TESTS: the button of the current layout */
+/* .layoutSwitch button {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+} */
+
 .active {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
 }
 
-/* bonus: the search input */
 .search {
+}
+
+.layoutSwitch {
+  display: inline-flex;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.layoutSwitch button {
+  padding: 6px 14px;
+  border: none;
+  background-color: #ffffff;
+  color: #111827;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.layoutSwitch button + button {
+  border-left: 1px solid #d1d5db;
+}
+
+.layoutSwitch button.active {
+  background-color: #0f172a;
+  color: #ffffff;
 }

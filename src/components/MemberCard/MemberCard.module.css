@@ -2,42 +2,83 @@
    Use them in MemberCard.jsx: className={styles.card}
    Don't delete the classes marked "REQUIRED BY THE TESTS". */
 
-/* the card - border, padding, shadow */
 .card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
-/* REQUIRED BY THE TESTS: the card of the selected member */
 .selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
 }
 
-/* REQUIRED BY THE TESTS: an inactive member - the card looks faded */
 .inactive {
+  opacity: 0.55;
 }
 
-/* a circle with the initials, same size for all */
 .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-/* the member name */
+.info {
+  flex: 1;
+}
+
 .name {
+  margin: 0 0 4px;
+  font-size: 1rem;
 }
 
-/* the role badge */
 .badge {
+  font-size: 0.75rem;
+  color: #4b5563;
+  background-color: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 999px;
 }
 
-/* the small action button (disabled -> faded, no hover effect) */
 .roleButton {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 
-/* REQUIRED BY THE TESTS: the button of a Leader - blue */
+.roleButton:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.roleButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .leader {
+  background-color: #2563eb;
 }
 
-/* REQUIRED BY THE TESTS: the button of a Member - green */
 .member {
+  background-color: #16a34a;
 }
 
-/* REQUIRED BY THE TESTS: the button of a Guest - purple */
 .guest {
+  background-color: #7c3aed;
 }

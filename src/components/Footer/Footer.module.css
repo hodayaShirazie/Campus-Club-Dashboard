@@ -4,4 +4,8 @@
 
 /* the <footer> - small, centered, gray text */
 .footer {
+  padding: 16px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
 }
